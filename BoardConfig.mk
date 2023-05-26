@@ -23,7 +23,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-DEVICE_PATH := device/xiaomi/whyred
+DEVICE_PATH := device/xiaomi/tulip
 
 # Architecture
 TARGET_ARCH := arm64
@@ -57,7 +57,9 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_CONFIG := tulip_defconfig
+TARGET_KERNEL_SOURCE := kernel/realme/sdm660
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm660
